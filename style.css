@@ -1,0 +1,304 @@
+/*
+1. Изменить nav-menu - оставить ссылку на контакты
+2. Убрать рамку в контейнере НОВОСТИ
+
+*/
+
+* {
+  transition: .5s ease-in-out;
+}
+
+body {
+  padding: 0px;
+  margin: auto;
+  max-width: 1920px;
+  background: #0C0E29;
+}
+
+.header {
+  min-height: 100vh;
+  background: #2c3e50;
+  background: url("img/header-bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  border: 1px solid black;
+}
+
+.header h1, .header h2 {
+  text-align: center;
+  font-family: Russo One Georgia, serif;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  text-shadow: 1px 1px 5px;
+  color: #ecf0f1;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+  padding: 80px 0px 25px;
+}
+
+.header h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.page-nav {
+  min-height: 50px;
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.page-nav ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.page-nav li {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(164, 176, 190,1.0);
+
+}
+
+.page-nav li:hover {
+  color: rgba(87, 96, 111,1.0);
+}
+
+.services {
+  text-align: center;
+}
+
+.service-item {
+  display: inline-block;
+  position: relative;
+  width: 260px;
+  margin: 100px 65px 160px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: 10px;
+  color: rgba(164, 176, 190, 1.0);
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.triangle-down {
+  position: absolute;
+  bottom: 15px;
+  right: 50px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid gray;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+label:hover .triangle-down {
+  transform: translateY(5px);
+}
+
+.service-item span {
+    display: block;
+    margin: 10px;
+
+  }
+
+.service-item span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.service-list li {
+  margin: 0;
+  padding: 5px 0px;
+  list-style: none;
+  text-align: inherit;
+  border-bottom: 1px solid gray;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] label .triangle-down {
+  transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked {
+
+}
+
+input[type="checkbox"]:checked + label {
+  color: #273c75;
+
+}
+
+input[type="checkbox"]:checked + label .triangle-down {
+  transform: rotate(180deg);
+
+}
+
+input[type="checkbox"] + label ~ div {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+
+}
+
+input[type="checkbox"]:checked + label + div {
+    display: block;
+    position: absolute;
+    margin-right: 15px;
+    margin-left: -15px;
+    height: 160px;
+    overflow: auto;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.middleContent {
+  box-sizing: border-box;
+  height: 600px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgb(127, 140, 141);
+  background: rgb(127, 140, 141);
+}
+
+.titleNews {
+  float: left;
+  margin: 20px 30px;
+  padding: 10px;
+  border: 1px solid;
+  background: #95a5a6;
+}
+
+.titleNews span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.newContent {
+  box-sizing: border-box;
+  width: 60%;
+  max-height: 100%;
+  margin: 5px auto;
+  overflow: auto;
+  border-top: 1px solid rgb(127, 140, 141);
+  /*background: rgba(0, 0, 0, 0.3);*/
+}
+
+.newContentItem {
+  margin: 5px;
+  border: 2px solid #34495e;
+  background: #95a5a6;
+}
+
+.newContentItem p {
+  margin: 0;
+  padding: 0;
+  padding: 5px;
+
+  font-size: Georgia, serif;
+
+}
+
+.newContentItem p span {
+  font-weight: bold;
+}
+
+.footer {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+  color: #bdc3c7;
+}
+
+.wrapper-footer {
+  text-align: center;
+}
+
+.footer .list {
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 20px;
+  height: 250px;
+  vertical-align: top;
+}
+
+.footer .contacts, .footer .clients {
+  height: 180px;
+}
+
+.footer .list h4 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer .clients a {
+  display: block;
+  padding: 5px;
+
+  text-align: center;
+  color: #bdc3c7;
+}
+
+.footer .clients a:hover {
+  color: rgba(87, 96, 111,1.0);
+}
+
+.footer .about {
+  width: 250px;
+  overflow: auto;
+}
+
+
+.footer .about span {
+  font-size: 13px;
+  padding: 5px;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+  position: relative;
+  padding: 10px;
+  padding-left: 40px;
+  text-align: center;
+
+  /* border-top: 1px solid rgba(116, 125, 140,1.0); */
+  border-top: 1px solid white;
+
+}
+
+
+.copyright span:first-child {
+  position: relative;
+  top: -5px;
+  left: 0px;
+}
+
+.copyright span:last-child {
+  font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 300px;
+/*    background: gray;*/
+  }
+
+}

@@ -1,11 +1,9 @@
 /*
-1. Изменить nav-menu - оставить ссылку на контакты
-2. Убрать рамку в контейнере НОВОСТИ
-
+3. Сделать соответствующие теги в новостях - дата  (опиционально)
 */
 
 * {
-  transition: .5s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 body {
@@ -21,6 +19,7 @@ body {
   background: url("img/header-bg.jpg") no-repeat 50% 50%;
   background-size: cover;
   border: 1px solid black;
+  text-align: center;
 }
 
 .header h1, .header h2 {
@@ -29,7 +28,7 @@ body {
   font-weight: normal;
   text-transform: uppercase;
 
-  text-shadow: 1px 1px 5px;
+  text-shadow: 1px 1px 1px;
   color: #ecf0f1;
 }
 
@@ -44,44 +43,38 @@ body {
   padding: 0;
 }
 
-.page-nav {
-  min-height: 50px;
-  margin-top: 30px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.page-nav ul {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-  text-align: center;
-  vertical-align: bottom;
-}
-
-.page-nav li {
-  display: inline-block;
-  padding: 10px;
-  margin-right: 100px;
-
-  font-family: 'Open Sans', sans-serif;
-  color: rgba(164, 176, 190,1.0);
+.button-contact {
+  margin: 30px 0px 50px;
+  padding: 10px 0px;
+  width: 200px;
+  border-color: rgba(164, 176, 190, 1.0);;
+  background: transparent;
 
 }
 
-.page-nav li:hover {
-  color: rgba(87, 96, 111,1.0);
+.button-contact span {
+  font-weight: bold;
+  color: #bdc3c7;
+}
+
+.button-contact:hover {
+  border-color: rgba(183, 21, 64, .5);
+}
+
+.button-contact:hover span {
+  color: rgba(183, 21, 64, .5);;
 }
 
 .services {
   text-align: center;
+  padding-top: 150px;
 }
 
 .service-item {
   display: inline-block;
   position: relative;
   width: 260px;
-  margin: 100px 65px 160px 10px;
+  margin: 0 60px 190px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -241,6 +234,10 @@ input[type="checkbox"]:checked + label + div {
   height: 180px;
 }
 
+.footer .contacts a {
+  color: rgba(241, 242, 246,1.0);
+}
+
 .footer .list h4 {
   margin: 0;
   padding: 0;
@@ -275,7 +272,7 @@ input[type="checkbox"]:checked + label + div {
   margin-top: 20px;
   position: relative;
   padding: 10px;
-  padding-left: 40px;
+  /*padding-left: 40px;*/
   text-align: center;
 
   /* border-top: 1px solid rgba(116, 125, 140,1.0); */
@@ -298,7 +295,11 @@ input[type="checkbox"]:checked + label + div {
 @media (max-width: 768px) {
   .header {
     min-height: 300px;
-/*    background: gray;*/
+    background-image: none;
+  }
+
+  .service-item {
+    margin: 0 0 190px;
   }
 
 }
